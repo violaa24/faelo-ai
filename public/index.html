@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faelo AI - Ask your factory Get an answer you can act on</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-40 bg-white/90 backdrop-blur-md border-b border-gray-100 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#home" class="flex items-center gap-1.5 group">
+                        <div class="w-[3.9rem] h-[3.9rem] flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+                            <img src="images/faelo-ai-logo.png" alt="Faelo AI Logo" class="w-full h-full object-contain drop-shadow-sm">
+                        </div>
+                        <span class="font-bold text-xl tracking-tight text-brand-dark">FAELO AI</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-600 font-medium text-sm">Home</a>
+                    <a href="#howitworks" class="nav-link text-gray-600 font-medium text-sm">Product</a>
+                    <a href="#about" class="nav-link text-gray-600 font-medium text-sm">About Us</a>
+                    <button type="button" data-open-demo class="nav-cta bg-brand-blue text-white px-6 py-2.5 rounded-full font-medium text-sm">
+                        Book a demo
+                    </button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-brand-dark focus:outline-none w-8 h-8 flex items-center justify-center" aria-label="Toggle menu" aria-expanded="false">
+                        <i id="menu-icon" class="fa-solid fa-bars text-2xl transition-all duration-200"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-1 shadow-lg">
+                <a href="#home" class="mobile-nav-link block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-blue hover:bg-gray-50 rounded-md">Home</a>
+                <a href="#howitworks" class="mobile-nav-link block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-blue hover:bg-gray-50 rounded-md">Product</a>
+                <a href="#about" class="mobile-nav-link block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-blue hover:bg-gray-50 rounded-md">About Us</a>
+                <button type="button" data-open-demo class="w-full text-left block px-3 py-3 text-base font-medium text-brand-blue hover:bg-blue-50 rounded-md">Book a demo</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg pt-32 pb-20 lg:pt-40 lg:pb-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="hero-reveal hero-delay-1 inline-block px-4 py-1.5 rounded-full bg-blue-100 text-brand-blue font-semibold text-xs tracking-wider uppercase mb-6 shadow-sm border border-blue-200">
+                AI Manufacturing Intelligence Copilot
+            </div>
+            <h1 class="hero-reveal hero-title hero-delay-2 text-5xl md:text-6xl lg:text-7xl font-extrabold text-brand-dark tracking-tight leading-tight mb-6 max-w-4xl mx-auto">
+                Ask your factory<br>
+                <span class="hero-gradient-text text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-blue-800">Get an answer you can act on</span>
+            </h1>
+            <p class="hero-reveal hero-delay-3 mt-4 text-xl text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Faelo connects scattered manufacturing data, unifies the context, and turns operational questions into clear resolution.
+            </p>
+            <div class="hero-reveal hero-delay-4 flex justify-center space-x-4">
+                <button type="button" data-open-demo class="bg-brand-blue hover:bg-blue-700 text-white px-8 py-3.5 rounded-full font-semibold text-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    Book a Demo
+                </button>
+            </div>
+            
+            <!-- Evidence-backed factory answer preview -->
+            <div class="hero-reveal hero-mockup hero-delay-5 mt-16 max-w-6xl mx-auto">
+                <article class="factory-answer-preview" aria-label="Example of an evidence-backed factory answer from Faelo AI">
+                    <p class="answer-eyebrow">Faelo AI <span aria-hidden="true">/</span> Evidence-backed factory answer</p>
+
+                    <div class="mockup-reveal mockup-delay-1 factory-question">
+                        Why did Line 3 rejection rate increase yesterday?
+                    </div>
+
+                    <div class="mockup-reveal mockup-delay-2 answer-summary">
+                        <div class="answer-summary-icon" aria-hidden="true"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <div>
+                            <h2>Faelo AI found the change, the likely driver, and the next action.</h2>
+                            <p>Every conclusion remains linked to the underlying production evidence.</p>
+                        </div>
+                    </div>
+
+                    <div class="answer-grid">
+                        <section class="mockup-insight-card answer-card answer-card-change" aria-labelledby="answer-change-title">
+                            <p class="answer-card-label" id="answer-change-title">What changed</p>
+                            <p class="answer-metric">4.8%</p>
+                            <h3>Rejection rate</h3>
+                            <p class="answer-delta">+1.7 pts vs prior day</p>
+                            <div class="answer-card-divider"></div>
+                            <p class="answer-meta">Line 3 <span aria-hidden="true">•</span> Shift B</p>
+                        </section>
+
+                        <section class="mockup-insight-card answer-card answer-card-driver" aria-labelledby="answer-driver-title">
+                            <p class="answer-card-label" id="answer-driver-title">Likely driver</p>
+                            <h3>Supplier B material variance</h3>
+                            <p class="answer-card-note">Largest contribution to the increase</p>
+                            <div class="answer-progress" role="img" aria-label="62 percent contribution">
+                                <span style="width: 62%"></span>
+                            </div>
+                            <p class="answer-contribution">62% contribution</p>
+                            <div class="answer-tags" aria-label="Supporting evidence">
+                                <span>Batch B24</span>
+                                <span>Thickness above spec</span>
+                            </div>
+                        </section>
+
+                        <section class="mockup-insight-card answer-card answer-card-action" aria-labelledby="answer-action-title">
+                            <p class="answer-card-label" id="answer-action-title">Recommended action</p>
+                            <h3>Contain and verify</h3>
+                            <ul class="answer-actions">
+                                <li>Reset seal temperature to 176°C</li>
+                                <li>Quarantine material batch B24</li>
+                                <li>Verify the next 30 samples</li>
+                            </ul>
+                            <p class="answer-owner">PIC: QA Lead</p>
+                        </section>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="howitworks" class="how-it-works py-20 lg:py-24 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="scroll-reveal reveal-up text-center mb-14">
+                <h2 class="text-brand-blue font-semibold tracking-wide uppercase text-sm mb-2">How It Works</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4">From one question to one practical next step.</h3>
+                <p class="text-lg text-gray-500 max-w-2xl mx-auto">A seamless workflow that transforms messy data into structured action.</p>
+            </div>
+
+            <div class="relative">
+                <!-- Vertical Line connecting steps (Desktop) -->
+                <div class="process-line hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 transform -translate-x-1/2"></div>
+
+                <!-- Step 1 -->
+                <div class="relative flex flex-col md:flex-row items-center justify-between mb-12 md:mb-16">
+                    <div class="scroll-reveal reveal-left md:w-5/12 mb-8 md:mb-0 text-right pr-0 md:pr-12">
+                        <div class="inline-block px-3 py-1 bg-gray-100 text-gray-600 rounded text-xs font-bold mb-4">STEP 01</div>
+                        <h4 class="text-2xl font-bold text-brand-dark mb-3">Ask the factory, directly.</h4>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            <span class="block">Stop searching across dashboards.</span>
+                            <span class="block">Just ask Faelo in plain language.</span>
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-500 inline-block text-left">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> Simple prompt</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> Connects to existing data</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Center Dot -->
+                    <div class="step-marker hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-white border-4 border-brand-blue items-center justify-center z-10 shadow-sm">
+                        <div class="w-2 h-2 bg-brand-blue rounded-full"></div>
+                    </div>
+
+                    <div class="scroll-reveal reveal-right reveal-delay-1 process-card md:w-[46%] bg-white rounded-xl shadow-lg border border-gray-100 p-6 w-full">
+                        <!-- Visual representation of the factory data flow -->
+                        <div class="data-flow-card" aria-label="Faelo traces connected ERP or Excel data to answer a factory question">
+                            <div class="flow-sources" aria-label="Factory data sources">
+                                <div class="flow-source"><i class="fa-solid fa-industry" aria-hidden="true"></i><span>Production</span></div>
+                                <div class="flow-source"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i><span>Quality</span></div>
+                                <div class="flow-source"><i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i><span>Inventory</span></div>
+                                <div class="flow-source"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i><span>Maintenance</span></div>
+                            </div>
+                            <div class="flow-source-arrows" aria-hidden="true">
+                                <i class="fa-solid fa-arrow-right"></i>
+                                <i class="fa-solid fa-arrow-right"></i>
+                                <i class="fa-solid fa-arrow-right"></i>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </div>
+                            <div class="flow-hub"><i class="fa-solid fa-database" aria-hidden="true"></i><span>ERP / Excel</span></div>
+                            <div class="flow-connector" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></div>
+                            <div class="flow-answer">
+                                <span class="flow-answer-label"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i> Faelo is tracing the data</span>
+                                <span class="flow-answer-copy">Searching connected records to answer:</span>
+                                <strong>Why is the rejection rate high?</strong>
+                                <span class="flow-answer-status">
+                                    <span class="flow-answer-status-icon"><i class="fa-solid fa-wave-square" aria-hidden="true"></i></span>
+                                    <span><small>Analyzing</small>Production, quality, inventory, and maintenance data</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative flex flex-col md:flex-row-reverse items-center justify-between mb-12 md:mb-16">
+                    <div class="scroll-reveal reveal-right md:w-5/12 mb-8 md:mb-0 pl-0 md:pl-12">
+                        <div class="inline-block px-3 py-1 bg-red-100 text-red-600 rounded text-xs font-bold mb-4">STEP 02</div>
+                        <h4 class="text-2xl font-bold text-brand-dark mb-3">Diagnose with evidence.</h4>
+                        <p class="text-gray-600 leading-relaxed mb-6">Faelo correlates the data and highlights the most probable root causes based on historical patterns and current deviations, not just guesses.</p>
+                        <ul class="space-y-2 text-sm text-gray-500">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-chart-line text-red-500"></i> Anomaly detection</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-link text-red-500"></i> Multi-variable correlation</li>
+                        </ul>
+                    </div>
+
+                    <!-- Center Dot -->
+                    <div class="step-marker hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-white border-4 border-red-500 items-center justify-center z-10 shadow-sm">
+                        <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+                    </div>
+
+                    <div class="scroll-reveal reveal-left reveal-delay-1 process-card md:w-5/12 bg-white rounded-xl shadow-lg border border-gray-100 p-6 w-full">
+                         <!-- Visual representation of diagnostics -->
+                         <div class="space-y-4">
+                            <div class="flex items-center gap-3">
+                                <span class="text-xs font-mono text-gray-400 w-12">Material</span>
+                                <div class="flex-1 h-2 bg-gray-100 rounded-full overflow-hidden flex">
+                                    <div class="bg-gray-300 w-1/2 h-full"></div>
+                                    <div class="bg-red-500 w-1/4 h-full animate-pulse"></div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="text-xs font-mono text-gray-400 w-12">Reject</span>
+                                <div class="flex-1 h-2 bg-gray-100 rounded-full overflow-hidden flex">
+                                    <div class="bg-brand-blue w-3/4 h-full"></div>
+                                </div>
+                            </div>
+                            <div class="mt-4 p-3 bg-red-50 rounded border border-red-100 text-xs text-red-700">
+                                <strong>High Correlation (92%):</strong> Supplier B material variance aligns with increased rejection events.
+                            </div>
+                         </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative flex flex-col md:flex-row items-center justify-between">
+                    <div class="scroll-reveal reveal-left md:w-5/12 mb-8 md:mb-0 text-right pr-0 md:pr-12">
+                        <div class="inline-block px-3 py-1 bg-green-100 text-green-600 rounded text-xs font-bold mb-4">STEP 03</div>
+                        <h4 class="text-2xl font-bold text-brand-dark mb-3">Recommended Action</h4>
+                        <p class="text-gray-600 leading-relaxed mb-6">Faelo generates specific recommended actions to solve factory issues, reduce recurring losses, and guide the responsible team on what to do next.</p>
+                        <ul class="space-y-2 text-sm text-gray-500 inline-block text-left">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-bullseye text-green-500"></i> Specific corrective actions</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-user-check text-green-500"></i> Clear priority and responsible PIC</li>
+                        </ul>
+                    </div>
+
+                    <!-- Center Dot -->
+                    <div class="step-marker hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-white border-4 border-green-500 items-center justify-center z-10 shadow-sm">
+                        <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                    </div>
+
+                    <div class="scroll-reveal reveal-right reveal-delay-1 process-card md:w-5/12 bg-white rounded-xl shadow-lg border border-gray-100 p-6 w-full">
+                        <!-- Visual representation of a factory-specific recommended action -->
+                        <div class="action-flow" aria-label="Recommended actions for supplier material variance">
+                            <div class="action-issue">
+                                <span class="action-issue-icon" aria-hidden="true"><i class="fa-solid fa-triangle-exclamation"></i></span>
+                                <span class="action-issue-copy"><small>Detected issue</small><strong>Supplier B material variance</strong></span>
+                                <span class="action-impact">High rejection rate</span>
+                            </div>
+                            <div class="action-direction" aria-hidden="true"><i class="fa-solid fa-arrow-down"></i></div>
+                            <div class="action-plan">
+                                <div class="action-plan-heading">
+                                    <span><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i> Recommended actions</span>
+                                    <span class="action-ready"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Ready</span>
+                                </div>
+                                <ul class="action-list">
+                                    <li><span>01</span>Quarantine affected batch B24</li>
+                                    <li><span>02</span>Inspect incoming material thickness</li>
+                                    <li><span>03</span>Verify the next 30 samples</li>
+                                </ul>
+                                <div class="action-owner"><i class="fa-solid fa-user-shield" aria-hidden="true"></i> PIC: QA Lead</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Faelo Section -->
+    <section id="value-proposition" class="value-proposition pt-12 lg:pt-14 pb-20 lg:pb-24 bg-gray-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="value-intro grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] items-center gap-8 lg:gap-16 mb-12">
+                <div class="scroll-reveal reveal-left max-w-2xl">
+                    <p class="text-sm font-bold text-brand-blue tracking-widest uppercase mb-3">Core capabilities</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-dark leading-tight">Why Faelo</h2>
+                </div>
+                <div class="scroll-reveal reveal-right reveal-delay-1 value-summary bg-white border border-blue-100 rounded-2xl p-6 shadow-sm">
+                    <div class="value-summary-accent" aria-hidden="true"></div>
+                    <p class="text-gray-600 text-base leading-relaxed">
+                        Faelo combines speed, deep manufacturing intelligence, and clear ownership so factory teams can move from a question to accountable action.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="scroll-reveal reveal-scale value-card bg-white rounded-2xl p-8 border border-gray-100 shadow-sm group relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-brand-blue transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                    <div class="value-card-icon w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-brand-blue mb-6">
+                        <i class="fa-solid fa-comment-dots text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3 leading-tight">Fast and efficient with one prompt</h3>
+                    <p class="text-base text-gray-500 leading-relaxed">Ask in natural language and get an evidence-backed answer in seconds, without manually compiling reports or navigating multiple systems.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="scroll-reveal reveal-scale reveal-delay-1 value-card bg-white rounded-2xl p-8 border border-gray-100 shadow-sm group relative overflow-hidden">
+                     <div class="absolute top-0 left-0 w-full h-1 bg-red-400 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                    <div class="value-card-icon w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center text-red-500 mb-6">
+                        <i class="fa-solid fa-magnifying-glass-chart text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3 leading-tight">Deep manufacturing analysis</h3>
+                    <p class="text-base text-gray-500 leading-relaxed">Faelo cross-references production, quality, materials, inventory, and maintenance data to uncover anomalies, correlations, and likely root causes.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="scroll-reveal reveal-scale reveal-delay-2 value-card bg-white rounded-2xl p-8 border border-gray-100 shadow-sm group relative overflow-hidden">
+                     <div class="absolute top-0 left-0 w-full h-1 bg-green-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                    <div class="value-card-icon w-12 h-12 rounded-xl bg-green-50 flex items-center justify-center text-green-600 mb-6">
+                        <i class="fa-solid fa-bullseye text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3 leading-tight">Factory-specific recommended actions</h3>
+                    <p class="text-base text-gray-500 leading-relaxed">Receive prioritized actions tailored to the exact line, material, process, and operating context behind the issue.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="scroll-reveal reveal-scale reveal-delay-3 value-card bg-white rounded-2xl p-8 border border-gray-100 shadow-sm group relative overflow-hidden">
+                     <div class="absolute top-0 left-0 w-full h-1 bg-indigo-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                    <div class="value-card-icon w-12 h-12 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-600 mb-6">
+                        <i class="fa-solid fa-bell text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3 leading-tight">Anomaly alerts to the responsible PIC</h3>
+                    <p class="text-base text-gray-500 leading-relaxed">When an anomaly appears, Faelo explains what changed and routes the alert to the responsible PIC for faster follow-up.</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="audience-section pt-20 lg:pt-24 pb-10 lg:pb-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="scroll-reveal reveal-up max-w-3xl mx-auto text-center mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4">Use Case</h2>
+                <p class="text-base md:text-lg text-gray-600 leading-relaxed">Use Faelo across production, quality, inventory, maintenance, and other connected factory operations to understand performance, investigate issues, and take action from one place.</p>
+            </div>
+
+            <!-- Use Case Coverage -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Production -->
+                <div class="scroll-reveal reveal-up use-case-card h-full bg-white border border-gray-200 rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
+                    <div class="use-case-icon w-20 h-20 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-4 text-brand-blue text-3xl">
+                        <i class="fa-solid fa-industry"></i>
+                    </div>
+                    <h4 class="font-bold text-brand-dark mb-1">Production</h4>
+                    <p class="text-xs text-brand-blue font-semibold mb-3 uppercase tracking-wide">Output &amp; Performance</p>
+                    <p class="text-sm text-gray-500">Monitor output, OEE, downtime, and line performance to spot issues and keep production on target.</p>
+                </div>
+
+                <!-- Quality -->
+                <div class="scroll-reveal reveal-up reveal-delay-1 use-case-card h-full bg-white border border-gray-200 rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
+                    <div class="use-case-icon w-20 h-20 mx-auto bg-green-100 rounded-full flex items-center justify-center mb-4 text-green-600 text-3xl">
+                        <i class="fa-solid fa-clipboard-check"></i>
+                    </div>
+                    <h4 class="font-bold text-brand-dark mb-1">Quality</h4>
+                    <p class="text-xs text-green-600 font-semibold mb-3 uppercase tracking-wide">Defects &amp; Root Cause</p>
+                    <p class="text-sm text-gray-500">Trace defects, rejection trends, and process variation to identify root causes and corrective actions.</p>
+                </div>
+
+                <!-- Inventory -->
+                <div class="scroll-reveal reveal-up reveal-delay-2 use-case-card h-full bg-white border border-gray-200 rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
+                    <div class="use-case-icon w-20 h-20 mx-auto bg-orange-100 rounded-full flex items-center justify-center mb-4 text-orange-600 text-3xl">
+                        <i class="fa-solid fa-boxes-stacked"></i>
+                    </div>
+                    <h4 class="font-bold text-brand-dark mb-1">Inventory</h4>
+                    <p class="text-xs text-orange-600 font-semibold mb-3 uppercase tracking-wide">Materials &amp; Stock</p>
+                    <p class="text-sm text-gray-500">Check materials, stock movement, shortages, and batch usage to support faster planning decisions.</p>
+                </div>
+
+                <!-- Factory-wide Operations -->
+                <div class="scroll-reveal reveal-up reveal-delay-3 use-case-card h-full bg-white border border-gray-200 rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
+                    <div class="use-case-icon w-20 h-20 mx-auto bg-indigo-100 rounded-full flex items-center justify-center mb-4 text-indigo-600 text-3xl">
+                        <i class="fa-solid fa-diagram-project"></i>
+                    </div>
+                    <h4 class="font-bold text-brand-dark mb-1">Factory-wide Operations</h4>
+                    <p class="text-xs text-indigo-600 font-semibold mb-3 uppercase tracking-wide">All Connected Workflows</p>
+                    <p class="text-sm text-gray-500">Ask about maintenance, utilities, shifts, logistics, and other connected factory activities in one place.</p>
+                </div>
+            </div>
+
+            <!-- Product Interface Preview -->
+            <figure class="application-preview mt-12" aria-labelledby="application-preview-caption">
+                <figcaption id="application-preview-caption" class="sr-only">Faelo AI Manufacturing Intelligence Copilot interface</figcaption>
+                <img class="application-preview-art" src="assets/faelo-chat-interface.svg" alt="Detailed Faelo AI Manufacturing Intelligence Copilot interface showing factory data analysis, root causes, and recommended actions" width="1440" height="1024" loading="lazy" decoding="async">
+                <img class="application-preview-logo" src="images/faelo-logo-mark.png" alt="" width="256" height="256" aria-hidden="true">
+            </figure>
+        </div>
+    </section>
+
+    <!-- Founders Section -->
+    <section id="about" class="team-section pt-10 lg:pt-12 pb-20 lg:pb-24 bg-white relative overflow-hidden border-t border-gray-100" style="background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px;">
+        <!-- Faint grid background overlay -->
+        <div class="absolute inset-0 bg-white/80"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="scroll-reveal reveal-up mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark">Our Founders</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Team Member 1 -->
+                <div class="scroll-reveal reveal-scale team-card bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                    <div class="team-avatar bg-blue-50 rounded-xl aspect-square mb-6 overflow-hidden">
+                        <img src="images/serafaldo-faelo-ai.jpeg" alt="Serafaldo Angga" class="w-full h-full object-cover" width="800" height="800" loading="lazy" decoding="async">
+                    </div>
+                    <h4 class="text-xl font-bold text-brand-dark mb-1">Serafaldo Angga</h4>
+                    <p class="text-sm font-semibold text-brand-blue">CEO & Co-Founder</p>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="scroll-reveal reveal-scale reveal-delay-1 team-card bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                    <div class="team-avatar bg-blue-50 rounded-xl aspect-square mb-6 overflow-hidden">
+                        <img src="images/edwardus-faelo-ai.jpeg" alt="Edwardus Kevinnul" class="w-full h-full object-cover" width="800" height="800" loading="lazy" decoding="async">
+                    </div>
+                    <h4 class="text-xl font-bold text-brand-dark mb-1">Edwardus Kevinnul</h4>
+                    <p class="text-sm font-semibold text-brand-blue">CTO & Co-Founder</p>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="scroll-reveal reveal-scale reveal-delay-2 team-card bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                    <div class="team-avatar bg-blue-50 rounded-xl aspect-square mb-6 overflow-hidden">
+                        <img src="images/viola-faelo-ai.jpeg" alt="Viola Amelia" class="w-full h-full object-cover" width="800" height="800" loading="lazy" decoding="async">
+                    </div>
+                    <h4 class="text-xl font-bold text-brand-dark mb-1">Viola Amelia</h4>
+                    <p class="text-sm font-semibold text-brand-blue">COO & Co-Founder</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section py-20 lg:py-24 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark">Frequently Asked Question</h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none gap-4">
+                        <span class="font-semibold text-brand-dark text-base md:text-lg">What is Faelo?</span>
+                        <i class="fa-solid fa-chevron-down text-gray-400 flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content px-6 text-gray-600 text-sm leading-relaxed border-t border-gray-100">
+                        <div class="py-4">Faelo is an AI manufacturing intelligence copilot. It connects to authorized ERP data or Excel files, lets your team ask operational questions in plain language, and returns clear, evidence-backed answers with recommended next steps.</div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none gap-4">
+                        <span class="font-semibold text-brand-dark text-base md:text-lg">Do I need perfectly organized data to use Faelo?</span>
+                        <i class="fa-solid fa-chevron-down text-gray-400 flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content px-6 text-gray-600 text-sm leading-relaxed border-t border-gray-100">
+                        <div class="py-4">No. Faelo can work with the ERP data or Excel files you already have, even if they are not perfectly organized. We can begin with the available structure and improve the data setup gradually.</div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none gap-4">
+                        <span class="font-semibold text-brand-dark text-base md:text-lg">How is this different from my existing dashboards?</span>
+                        <i class="fa-solid fa-chevron-down text-gray-400 flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content px-6 text-gray-600 text-sm leading-relaxed border-t border-gray-100">
+                        <div class="py-4">Traditional dashboards show predefined charts and metrics, so users still need to interpret them and investigate across several screens. Faelo lets users ask a direct question, analyzes the relevant ERP or Excel data, explains what happened, and suggests what to do next.</div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none gap-4">
+                        <span class="font-semibold text-brand-dark text-base md:text-lg">How is Faelo different from a general-purpose AI chatbot?</span>
+                        <i class="fa-solid fa-chevron-down text-gray-400 flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content px-6 text-gray-600 text-sm leading-relaxed border-t border-gray-100">
+                        <div class="py-4">A general-purpose AI chatbot answers from broad knowledge and the information a user manually provides. It does not know what is happening inside your factory. Faelo is built specifically for manufacturing and analyzes authorized ERP data or Excel files, so its answers are based on your actual production, quality, inventory, maintenance, and operational data.</div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none gap-4">
+                        <span class="font-semibold text-brand-dark text-base md:text-lg">What data sources can Faelo connect to?</span>
+                        <i class="fa-solid fa-chevron-down text-gray-400 flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content px-6 text-gray-600 text-sm leading-relaxed border-t border-gray-100">
+                        <div class="py-4">Faelo can connect to an ERP system or work with Excel files. We review the available structure and access with your team, then configure the most suitable connection for your factory.</div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none gap-4">
+                        <span class="font-semibold text-brand-dark text-base md:text-lg">Is my manufacturing data used to train public AI models?</span>
+                        <i class="fa-solid fa-chevron-down text-gray-400 flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content px-6 text-gray-600 text-sm leading-relaxed border-t border-gray-100">
+                        <div class="py-4">No. Manufacturing data from your ERP or Excel files remains private and is not used to train public AI models. Faelo uses controlled, company-authorized access so its answers are grounded in your factory data without making that data public.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white pt-12 pb-7">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-[minmax(0,1.6fr)_minmax(20rem,0.8fr)] gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-1.5 mb-4">
+                        <div class="w-[3.25rem] h-[3.25rem] flex items-center justify-center">
+                            <img src="images/faelo-ai-logo.png" alt="Faelo AI Logo" class="w-full h-full object-contain">
+                        </div>
+                        <span class="font-bold text-xl tracking-tight text-white">FAELO AI</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-sm">
+                        Manufacturing intelligence that turns fragmented factory data into clear, evidence-backed action.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-8 md:gap-10">
+                    <div>
+                        <h4 class="font-bold text-sm tracking-wider uppercase mb-3">Product</h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li><a href="#howitworks" class="hover:text-brand-blue transition-colors">How it Works</a></li>
+                            <li><a href="#value-proposition" class="hover:text-brand-blue transition-colors">Capabilities</a></li>
+                            <li>Security</li>
+                            <li>Integrations</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-sm tracking-wider uppercase mb-3">Company</h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li><a href="#about" class="hover:text-brand-blue transition-colors">About Us</a></li>
+                            <li><a href="#faq" class="hover:text-brand-blue transition-colors">FAQ</a></li>
+                            <li>Careers</li>
+                            <li>Contact</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-5 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-gray-500">
+                <p>&copy; 2026 Faelo AI. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <span>Privacy Policy</span>
+                    <span>Terms of Service</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Book Demo Modal -->
+    <div id="demoModal" class="modal">
+        <div class="modal-content">
+            <button type="button" class="close-modal" data-close-demo aria-label="Close">&times;</button>
+            
+            <div class="bg-white rounded-xl overflow-hidden shadow-2xl relative">
+                <!-- Top Decorative Border -->
+                <div class="h-2 w-full bg-gradient-to-r from-brand-blue to-blue-400"></div>
+                
+                <div class="p-8 md:p-12 h-[80vh] overflow-y-auto">
+                    <div class="mb-10 text-center max-w-2xl mx-auto">
+                        <h2 class="text-sm font-bold text-brand-blue tracking-widest uppercase mb-3">Book a Demo</h2>
+                        <h3 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4 leading-tight">Tell us what your factory needs to solve.</h3>
+                        <p class="text-gray-600 text-sm">
+                            Share your team, manufacturing context, and one recurring operational question. We will tailor the demo around the outcome that matters to you.
+                        </p>
+                    </div>
+
+                    <form id="demoForm" class="max-w-3xl mx-auto" autocomplete="off">
+                        <div class="demo-honeypot" aria-hidden="true">
+                            <label for="website">Website</label>
+                            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                            <div>
+                                <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First name *</label>
+                                <input id="firstName" name="firstName" type="text" maxlength="100" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all text-sm">
+                            </div>
+                            <div>
+                                <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last name *</label>
+                                <input id="lastName" name="lastName" type="text" maxlength="100" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all text-sm">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                                <input id="email" name="email" type="email" maxlength="254" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all text-sm">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone</label>
+                                <input id="phone" name="phone" type="tel" maxlength="50" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all text-sm">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                            <div>
+                                <label for="jobTitle" class="block text-sm font-medium text-gray-700 mb-2">Job title *</label>
+                                <input id="jobTitle" name="jobTitle" type="text" maxlength="150" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all text-sm">
+                            </div>
+                            <div>
+                                <label for="companyName" class="block text-sm font-medium text-gray-700 mb-2">Company name *</label>
+                                <input id="companyName" name="companyName" type="text" maxlength="200" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all text-sm">
+                            </div>
+                            <div>
+                                <label for="countryRegion" class="block text-sm font-medium text-gray-700 mb-2">Country / Region *</label>
+                                <input id="countryRegion" name="countryRegion" type="text" maxlength="120" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all text-sm">
+                            </div>
+                            <div>
+                                <label for="manufacturingIndustry" class="block text-sm font-medium text-gray-700 mb-2">Manufacturing Industry *</label>
+                                <input id="manufacturingIndustry" name="manufacturingIndustry" type="text" maxlength="160" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all text-sm">
+                            </div>
+                        </div>
+
+                        <div class="space-y-6 mb-8">
+                            <div>
+                                <label for="currentDataSources" class="block text-sm font-medium text-gray-700 mb-2">Current data sources *</label>
+                                <input id="currentDataSources" name="currentDataSources" type="text" maxlength="500" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all text-sm">
+                            </div>
+                            
+                            <div>
+                                <label for="primaryFactoryChallenge" class="block text-sm font-medium text-gray-700 mb-2">Primary factory challenge *</label>
+                                <input id="primaryFactoryChallenge" name="primaryFactoryChallenge" type="text" maxlength="1000" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all text-sm">
+                            </div>
+
+                            <div>
+                                <label for="factoryQuestion" class="block text-sm font-medium text-gray-700 mb-2">What factory question should Faelo help answer? *</label>
+                                <textarea id="factoryQuestion" name="factoryQuestion" maxlength="3000" required rows="3" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all text-sm resize-none" placeholder="Example: Why did Line 3 rejection increase after the latest material batch? Include the KPI, line, product, shift, or recurring loss if known."></textarea>
+                            </div>
+                            
+                            <div class="flex items-start gap-3 mt-4">
+                                <input type="checkbox" id="consent" name="consent" required class="mt-1 h-4 w-4 text-brand-blue border-gray-300 rounded focus:ring-brand-blue cursor-pointer">
+                                <label for="consent" class="text-xs text-gray-500 cursor-pointer">
+                                    I agree that Faelo AI may use this information to contact me about the demo. No live ERP access is required for the first conversation.
+                                </label>
+                            </div>
+                        </div>
+
+                        <div id="formMessage" class="demo-form-message" role="alert" aria-live="polite" hidden></div>
+
+                        <button type="submit" class="w-full bg-brand-blue hover:bg-blue-700 text-white font-bold py-4 rounded-lg transition-colors shadow-md text-lg mt-4">
+                            Request my demo
+                        </button>
+                        <p class="text-center text-xs text-gray-400 mt-4 pb-8">
+                            Your information is used only to arrange and tailor the demo.
+                        </p>
+                    </form>
+                    
+                    <!-- Success State (hidden by default via inline style) -->
+                    <div id="successState" style="display:none;" class="flex flex-col items-center justify-center text-center py-20">
+                        <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center text-green-500 text-4xl mb-6">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-dark mb-2">Request Received!</h3>
+                        <p class="text-gray-600 max-w-md mx-auto mb-8">
+                            Thank you for reaching out. Our team will review your factory context and contact you shortly to schedule your tailored demo.
+                        </p>
+                        <button type="button" data-close-demo class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-2 px-6 rounded-lg transition-colors">
+                            Close
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby2mp4mdjpzVAif4cDSjplIQ2YZBviydDDGR-cZspT7zzYY53TRPU7XAWeKNslYq_6_Vw/exec';
+        const form = document.getElementById('demoForm');
+        const successState = document.getElementById('successState');
+        const formMessage = document.getElementById('formMessage');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault(); 
+            
+            // 1. Bersihkan dan sembunyikan pesan error sisa dari percobaan sebelumnya
+            formMessage.hidden = true;
+            formMessage.innerText = "";
+            
+            // 2. Ubah teks tombol jadi loading
+            const btn = form.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = 'Sending request...';
+            btn.disabled = true;
+
+            // 3. Kirim data dengan mode: 'no-cors' agar browser tidak memblokir redirect Google
+            fetch(scriptURL, { 
+                method: 'POST', 
+                body: new FormData(form),
+                mode: 'no-cors' 
+            })
+            .then(() => {
+                // Karena no-cors, kita asumsikan sukses jika berhasil melewati jaringan
+                form.style.display = 'none';
+                successState.style.display = 'flex';
+                form.reset();
+            })
+            .catch(error => {
+                console.error('Error!', error.message);
+                formMessage.hidden = false;
+                formMessage.innerText = "Gagal mengirim data. Pastikan koneksi internet stabil.";
+            })
+            .finally(() => {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            });
+        });
+</script>
+</body>
+</html>

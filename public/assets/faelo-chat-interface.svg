@@ -1,0 +1,276 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="1024" viewBox="0 0 1440 1024">
+  <defs>
+    <linearGradient id="chat-brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#21344E"/>
+      <stop offset="1" stop-color="#21344E"/>
+    </linearGradient>
+    <linearGradient id="chat-ai" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F4F8FC"/>
+      <stop offset="1" stop-color="#F6FAFE"/>
+    </linearGradient>
+    <filter id="chat-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#071A36" flood-opacity="0.10"/>
+    </filter>
+    <pattern id="chat-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#5687B6" stroke-opacity="0.035"/>
+    </pattern>
+  </defs>
+
+  <rect width="1440" height="1024" fill="#F4F8FC"/>
+  <rect x="248" width="1192" height="1024" fill="url(#chat-grid)"/>
+
+  <!-- Sidebar -->
+  <g id="sidebar">
+    <rect width="248" height="1024" fill="#081D3A"/>
+    <circle cx="218" cy="87" r="72" fill="#5687B6" opacity="0.06"/>
+    <circle cx="26" cy="930" r="105" fill="#245F99" opacity="0.18"/>
+    <g id="brand" transform="translate(28 28)">
+
+      <text x="50" y="18" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#FFFFFF">FAELO AI</text>
+      <text x="50" y="36" font-family="Inter, Arial, sans-serif" font-size="9" font-weight="500" letter-spacing="1.2" fill="#EFF6FC">MANUFACTURING COPILOT</text>
+    </g>
+    <text x="28" y="114" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="700" letter-spacing="1.4" fill="#AAC5DF">WORKSPACE</text>
+    
+    <g id="nav-chat" transform="translate(0 132)">
+      <rect x="16" y="0" width="216" height="48" rx="12" fill="#EAF2FF"/>
+      <path d="M34 15H46C50 15 53 18 53 22V27C53 31 50 34 46 34H41L36 39V34H34C30 34 27 31 27 27V22C27 18 30 15 34 15Z" fill="none" stroke="#2563EB" stroke-width="2" stroke-linejoin="round"/>
+      <text x="66" y="30" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#1D4ED8">Chat</text>
+      <circle cx="215" cy="24" r="4" fill="#3B82F6"/>
+    </g>
+    
+    <g id="nav-projects" transform="translate(0 188)">
+      <rect x="16" y="0" width="216" height="48" rx="12" fill="none"/>
+      <path d="M28 17H38L41 21H54V36H28Z" fill="none" stroke="#C7DCF0" stroke-width="2" stroke-linejoin="round"/>
+      <text x="66" y="30" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="#D8E8F7">Projects</text>
+      
+    </g>
+    
+    <g id="nav-dashboard" transform="translate(0 244)">
+      <rect x="16" y="0" width="216" height="48" rx="12" fill="none"/>
+      <rect x="28" y="16" width="8" height="16" rx="2" fill="none" stroke="#C7DCF0" stroke-width="2"/><rect x="41" y="10" width="8" height="22" rx="2" fill="none" stroke="#C7DCF0" stroke-width="2"/><rect x="54" y="21" width="8" height="11" rx="2" fill="none" stroke="#C7DCF0" stroke-width="2"/>
+      <text x="76" y="30" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="#D8E8F7">Dashboard</text>
+      
+    </g>
+    
+    <g id="nav-history" transform="translate(0 300)">
+      <rect x="16" y="0" width="216" height="48" rx="12" fill="none"/>
+      <circle cx="42" cy="24" r="10" fill="none" stroke="#C7DCF0" stroke-width="2"/><path d="M42 18V24L47 27M32 15L28 15L28 19" fill="none" stroke="#C7DCF0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="76" y="30" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="#D8E8F7">History</text>
+      
+    </g>
+    
+    <g id="nav-settings" transform="translate(0 356)">
+      <rect x="16" y="0" width="216" height="48" rx="12" fill="none"/>
+      <circle cx="42" cy="24" r="7" fill="none" stroke="#C7DCF0" stroke-width="2"/><circle cx="42" cy="24" r="2.5" fill="#C7DCF0"/><path d="M42 12V8M42 40V36M30 24H26M58 24H54M33.5 15.5L30.5 12.5M53.5 35.5L50.5 32.5M50.5 15.5L53.5 12.5M30.5 35.5L33.5 32.5" stroke="#C7DCF0" stroke-width="2" stroke-linecap="round"/>
+      <text x="76" y="30" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="#D8E8F7">Settings</text>
+      
+    </g>
+
+    <g id="system-status" transform="translate(20 822)">
+      <rect width="208" height="74" rx="14" fill="#FFFFFF" opacity="0.08" stroke="#AAC5DF" stroke-opacity="0.25"/>
+      <circle cx="22" cy="23" r="7" fill="#16A34A"/>
+      <circle cx="22" cy="23" r="12" fill="none" stroke="#16A34A" opacity="0.25"/>
+      <text x="42" y="21" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Systems operational</text>
+      <text x="42" y="39" font-family="Inter, Arial, sans-serif" font-size="10" fill="#C7DCF0">ERP sync: 2 minutes ago</text>
+      <rect x="14" y="52" width="180" height="1" fill="#FFFFFF" opacity="0.1"/>
+      <text x="14" y="68" font-family="Inter, Arial, sans-serif" font-size="9" letter-spacing="0.7" fill="#AAC5DF">READ-ONLY CONNECTION</text>
+    </g>
+
+    <g id="user-profile" transform="translate(20 922)">
+      <circle cx="20" cy="20" r="20" fill="#5687B6"/>
+      <text x="20" y="25" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="800" fill="#081D3A">FA</text>
+      <text x="52" y="25" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Factory Admin</text>
+      <circle cx="194" cy="20" r="3" fill="#AAC5DF"/><circle cx="202" cy="20" r="3" fill="#AAC5DF"/><circle cx="210" cy="20" r="3" fill="#AAC5DF"/>
+    </g>
+  </g>
+
+  <!-- Main header -->
+  <g id="header">
+    <rect x="248" y="0" width="1192" height="88" fill="#FFFFFF" fill-opacity="0.94"/>
+    <line x1="248" y1="88" x2="1440" y2="88" stroke="#D8E8F7"/>
+    <text x="282" y="31" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="0.6" fill="#739AC0">OPERATIONS / CHAT</text>
+    <text x="282" y="60" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="750" fill="#0B2A52">Manufacturing Intelligence Copilot</text>
+    <g transform="translate(1146 22)">
+      <rect width="134" height="42" rx="12" fill="#F0FDF4" stroke="#BBF7D0"/>
+      <circle cx="19" cy="21" r="6" fill="#5687B6"/>
+      <text x="34" y="25" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#15803D">ERP CONNECTED</text>
+    </g>
+    <g transform="translate(1294 22)">
+      <rect width="42" height="42" rx="12" fill="#FFFFFF" stroke="#D8E8F7"/>
+      <path d="M21 12C17 12 14 15 14 19V24L11 28H31L28 24V19C28 15 25 12 21 12Z" fill="none" stroke="#5687B6" stroke-width="1.8" stroke-linejoin="round"/>
+      <circle cx="27" cy="13" r="4" fill="#5687B6"/>
+    </g>
+    <g transform="translate(1350 22)">
+      <circle cx="21" cy="21" r="21" fill="#123F73"/>
+      <text x="21" y="26" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="800" fill="#FFFFFF">FA</text>
+    </g>
+  </g>
+
+  <!-- Main chat area -->
+  <g id="chat-content">
+    <g id="chat-panel">
+      <rect x="280" y="116" width="792" height="872" rx="20" fill="#FFFFFF" stroke="#D8E8F7"/>
+      <g transform="translate(308 140)">
+        <circle cx="20" cy="20" r="20" fill="url(#chat-brand)"/>
+        <path d="M12 20H28M20 12V28M14.5 14.5L25.5 25.5M25.5 14.5L14.5 25.5" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" opacity="0.85"/>
+        <text x="52" y="17" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="750" fill="#0B2A52">Faelo AI</text>
+        <text x="52" y="36" font-family="Inter, Arial, sans-serif" font-size="11" fill="#739AC0">Online · Production, quality, inventory &amp; maintenance data</text>
+        <circle cx="721" cy="20" r="3" fill="#84A7C8"/>
+        <circle cx="733" cy="20" r="3" fill="#84A7C8"/>
+        <circle cx="745" cy="20" r="3" fill="#84A7C8"/>
+      </g>
+      <line x1="280" y1="192" x2="1072" y2="192" stroke="#E5F0FA"/>
+
+      <g id="welcome" transform="translate(308 218)">
+        <rect width="620" height="94" rx="16" fill="url(#chat-ai)" stroke="#BBF7D0"/>
+        <circle cx="30" cy="30" r="17" fill="#21344E"/>
+        <path d="M23 30H37M30 23V37" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+        <text x="58" y="29" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#0B2A52">Good Morning</text>
+        <text x="58" y="52" font-family="Inter, Arial, sans-serif" font-size="13" fill="#5687B6">I found one production anomaly that may need your attention.</text>
+        <text x="58" y="74" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="650" fill="#5687B6">Ask me about KPIs, defects, output, materials, or root causes.</text>
+      </g>
+
+      <g id="suggestions" transform="translate(308 328)">
+        <rect width="202" height="38" rx="10" fill="#F5F9FD" stroke="#E5F0FA"/>
+        <text x="16" y="24" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600" fill="#245F99">Why did output drop?</text>
+        <rect x="214" width="222" height="38" rx="10" fill="#F5F9FD" stroke="#E5F0FA"/>
+        <text x="230" y="24" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600" fill="#245F99">Show yesterday's rejection</text>
+        <rect x="448" width="248" height="38" rx="10" fill="#F5F9FD" stroke="#E5F0FA"/>
+        <text x="464" y="24" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600" fill="#245F99">Which material caused defects?</text>
+      </g>
+
+      <g id="user-message" transform="translate(466 390)">
+        <rect width="576" height="58" rx="16" fill="#21344E"/>
+        <text x="22" y="35" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Why did Line 3 rejection rate increase yesterday?</text>
+      </g>
+
+      <g id="ai-answer" transform="translate(308 470)">
+        <circle cx="20" cy="20" r="20" fill="url(#chat-brand)"/>
+        <path d="M12 20H28M20 12V28" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+        <text x="52" y="16" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#0B2A52">Faelo AI · analyzed 18,420 production records</text>
+        <text x="52" y="37" font-family="Inter, Arial, sans-serif" font-size="11" fill="#739AC0">ERP Production · QMS · Material Batch · Shift Roster</text>
+
+        <rect x="52" y="54" width="684" height="310" rx="16" fill="#F8FBFE" stroke="#D8E8F7"/>
+        <g transform="translate(72 75)">
+          <rect width="146" height="60" rx="12" fill="#F4F8FC"/>
+          <text x="16" y="22" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="700" letter-spacing="0.5" fill="#5687B6">REJECTION RATE</text>
+          <text x="16" y="48" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="800" fill="#DC2626">4.8%</text>
+          <text x="82" y="47" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#DC2626">↑ 1.6 pp</text>
+          <text x="166" y="18" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="750" fill="#0B2A52">Most likely root causes</text>
+          <text x="166" y="42" font-family="Inter, Arial, sans-serif" font-size="12" fill="#5687B6">The increase started at 14:20 after the material changeover.</text>
+        </g>
+
+        <g transform="translate(72 153)">
+          <text x="0" y="13" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#0B2A52">1</text>
+          <text x="26" y="13" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="650" fill="#123F73">Seal temperature exceeded control limit</text>
+          <rect x="430" y="2" width="150" height="10" rx="5" fill="#E5F0FA"/>
+          <rect x="430" y="2" width="108" height="10" rx="5" fill="#5687B6"/>
+          <text x="594" y="13" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="750" fill="#5687B6">43%</text>
+          <text x="0" y="49" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#0B2A52">2</text>
+          <text x="26" y="49" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="650" fill="#123F73">Material batch B24 showed higher thickness variation</text>
+          <rect x="430" y="38" width="150" height="10" rx="5" fill="#E5F0FA"/>
+          <rect x="430" y="38" width="78" height="10" rx="5" fill="#245F99"/>
+          <text x="594" y="49" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="750" fill="#245F99">31%</text>
+          <text x="0" y="85" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#0B2A52">3</text>
+          <text x="26" y="85" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="650" fill="#123F73">Changeover checklist was completed 12 minutes late</text>
+          <rect x="430" y="74" width="150" height="10" rx="5" fill="#E5F0FA"/>
+          <rect x="430" y="74" width="45" height="10" rx="5" fill="#5687B6"/>
+          <text x="594" y="85" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="750" fill="#5687B6">18%</text>
+        </g>
+
+        <g transform="translate(72 260)">
+          <rect width="644" height="80" rx="12" fill="#F0FDF4" stroke="#BBF7D0"/>
+          <circle cx="24" cy="24" r="12" fill="#21344E"/>
+          <path d="M18 24L22 28L30 20" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="46" y="22" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="750" fill="#0B2A52">Recommended action</text>
+          <text x="46" y="43" font-family="Inter, Arial, sans-serif" font-size="11" fill="#5687B6">Reset seal temperature to 176°C, quarantine batch B24, and verify 30 samples.</text>
+          <rect x="46" y="53" width="101" height="20" rx="6" fill="#DCFCE7"/>
+          <text x="57" y="67" font-family="Inter, Arial, sans-serif" font-size="9" font-weight="700" fill="#15803D">PIC: QA Lead</text>
+          <rect x="487" y="20" width="138" height="40" rx="10" fill="#2563EB"/>
+          <text x="556" y="45" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="750" fill="#FFFFFF">Create action plan</text>
+        </g>
+      </g>
+
+      <g id="chat-input" transform="translate(308 894)">
+        <rect width="736" height="66" rx="16" fill="#FFFFFF" stroke="#AAC5DF" stroke-width="1.5"/>
+        <circle cx="30" cy="33" r="15" fill="#F4F8FC"/>
+        <path d="M25 33L31 27C34 24 39 28 36 31L29 38C27 40 23 37 25 35L31 29" fill="none" stroke="#5687B6" stroke-width="1.7" stroke-linecap="round"/>
+        <text x="58" y="38" font-family="Inter, Arial, sans-serif" font-size="13" fill="#9AA6B2">Ask about production, quality, materials, or maintenance…</text>
+        <circle cx="650" cy="33" r="15" fill="#F2F7FC"/>
+        <path d="M650 25V36M645 31V34C645 41 655 41 655 34V31M642 36C644 46 656 46 658 36M650 44V48" fill="none" stroke="#5687B6" stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="700" cy="33" r="20" fill="#2563EB"/>
+        <path d="M692 33H708M702 27L708 33L702 39" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </g>
+
+    <!-- Context panel -->
+    <g id="context-panel">
+      <rect x="1096" y="116" width="316" height="872" rx="20" fill="#FFFFFF" stroke="#D8E8F7"/>
+      <text x="1122" y="151" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="750" fill="#0B2A52">Live context</text>
+      <text x="1122" y="171" font-family="Inter, Arial, sans-serif" font-size="11" fill="#739AC0">Data used for this conversation</text>
+      <line x1="1122" y1="190" x2="1386" y2="190" stroke="#E5F0FA"/>
+
+      <g transform="translate(1122 210)">
+        <rect width="264" height="54" rx="12" fill="#F5F9FD" stroke="#E5F0FA"/>
+        <rect x="14" y="13" width="28" height="28" rx="8" fill="#DCFCE7"/>
+        <path d="M21 20H35V34H21ZM21 25H35M27 20V34" fill="none" stroke="#5687B6" stroke-width="1.4"/>
+        <text x="54" y="23" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#123F73">Production ERP</text>
+        <text x="54" y="40" font-family="Inter, Arial, sans-serif" font-size="9" fill="#739AC0">Synced 2 min ago</text>
+        <circle cx="244" cy="27" r="5" fill="#5687B6"/>
+      </g>
+      <g transform="translate(1122 274)">
+        <rect width="264" height="54" rx="12" fill="#F5F9FD" stroke="#E5F0FA"/>
+        <rect x="14" y="13" width="28" height="28" rx="8" fill="#F2F7FC"/>
+        <path d="M21 20H35V34H21ZM24 24L27 27L32 22" fill="none" stroke="#245F99" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="54" y="23" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#123F73">Quality Management</text>
+        <text x="54" y="40" font-family="Inter, Arial, sans-serif" font-size="9" fill="#739AC0">18,420 records loaded</text>
+        <circle cx="244" cy="27" r="5" fill="#5687B6"/>
+      </g>
+      <g transform="translate(1122 338)">
+        <rect width="264" height="54" rx="12" fill="#F5F9FD" stroke="#E5F0FA"/>
+        <rect x="14" y="13" width="28" height="28" rx="8" fill="#EFF6FC"/>
+        <path d="M21 23L28 19L35 23V32L28 36L21 32Z" fill="none" stroke="#5687B6" stroke-width="1.5"/>
+        <text x="54" y="23" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#123F73">Material batches</text>
+        <text x="54" y="40" font-family="Inter, Arial, sans-serif" font-size="9" fill="#739AC0">Updated 14 min ago</text>
+        <circle cx="244" cy="27" r="5" fill="#5687B6"/>
+      </g>
+
+      <text x="1122" y="435" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="750" fill="#0B2A52">Anomaly monitor</text>
+      <g transform="translate(1122 452)">
+        <rect width="264" height="150" rx="14" fill="#FEF2F2" stroke="#FCA5A5"/>
+        <rect x="14" y="14" width="54" height="22" rx="7" fill="#FEE2E2"/>
+        <text x="41" y="29" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" font-weight="800" fill="#DC2626">HIGH</text>
+        <text x="14" y="62" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="750" fill="#7F1D1D">Line 3 rejection spike</text>
+        <text x="14" y="84" font-family="Inter, Arial, sans-serif" font-size="10" fill="#991B1B">4.8% versus 3.2% baseline</text>
+        <polyline points="14,125 42,119 70,121 98,110 126,114 154,87 182,91 210,64 236,69" fill="none" stroke="#DC2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <line x1="14" y1="104" x2="250" y2="104" stroke="#FCA5A5" stroke-dasharray="4 4"/>
+      </g>
+
+      <text x="1122" y="638" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="750" fill="#0B2A52">Conversation scope</text>
+      <g transform="translate(1122 656)">
+        <rect width="264" height="44" rx="10" fill="#F5F9FD" stroke="#E5F0FA"/>
+        <text x="14" y="18" font-family="Inter, Arial, sans-serif" font-size="9" font-weight="700" fill="#739AC0">PLANT</text>
+        <text x="14" y="34" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#123F73">Sidoarjo Plant</text>
+        <path d="M238 18L244 24L250 18" fill="none" stroke="#739AC0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <g transform="translate(1122 710)">
+        <rect width="264" height="44" rx="10" fill="#F5F9FD" stroke="#E5F0FA"/>
+        <text x="14" y="18" font-family="Inter, Arial, sans-serif" font-size="9" font-weight="700" fill="#739AC0">DATE RANGE</text>
+        <text x="14" y="34" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#123F73">Last 7 days</text>
+        <path d="M238 18L244 24L250 18" fill="none" stroke="#739AC0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+
+      <g transform="translate(1122 796)">
+        <rect width="264" height="142" rx="14" fill="#F0FDF4" stroke="#BBF7D0"/>
+        <circle cx="28" cy="28" r="14" fill="#21344E"/>
+        <path d="M21 28H35M28 21V35" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+        <text x="50" y="24" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="750" fill="#0B2A52">Explainable analysis</text>
+        <text x="50" y="41" font-family="Inter, Arial, sans-serif" font-size="9" fill="#739AC0">Evidence is shown with every answer</text>
+        <line x1="14" y1="58" x2="250" y2="58" stroke="#BBF7D0"/>
+        <text x="14" y="80" font-family="Inter, Arial, sans-serif" font-size="10" fill="#5687B6">• Confidence score included</text>
+        <text x="14" y="101" font-family="Inter, Arial, sans-serif" font-size="10" fill="#5687B6">• Source records traceable</text>
+        <text x="14" y="122" font-family="Inter, Arial, sans-serif" font-size="10" fill="#5687B6">• Human approval before action</text>
+      </g>
+    </g>
+  </g>
+</svg>

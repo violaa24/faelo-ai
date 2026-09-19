@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const { saveDemoRequest } = require('src/repositories/demoRequestRepository');
+const { saveDemoRequest } = require('./repositories/demoRequestRepository');
 
 const app = express();
 app.use(cors());
